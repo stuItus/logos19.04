@@ -239,6 +239,43 @@ sayHello();
 //    console.log('Hello World');
 //})();
 
-(function (name) {
-    console.log('Hello ' + name + '!');
-})('Loshara');
+//(function (name) {
+//    console.log('Hello ' + name + '!');
+//})('Loshara');
+
+// ------- VUE JS --------//
+new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello World',
+        seen: true,
+        users: [
+            {
+                username: 'John',
+                age: 23,
+                city: 'Lviv'
+            },
+            {
+                username: 'Tom',
+                age: 42,
+                city: 'Kiev'
+            },
+            {
+                username: 'Peter',
+                age: 18,
+                city: 'Rivne'
+            },
+            {
+                username: 'Nick',
+                age: 33,
+                city: 'Odessa'
+            }
+        ]
+
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('');
+        }
+    }
+});
